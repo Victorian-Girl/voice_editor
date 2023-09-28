@@ -41,7 +41,7 @@ def voice_speed():
         C7.pack()
         C8.pack()
 
-    button = tkinter.Button(voicespeed, text="select", command=my_check_button)
+    button = tkinter.Button(voicespeed, text="Select", command=my_check_button)
     button.pack(pady=10)
 
     third_menu = tkinter.Menu(voicespeed)
@@ -63,7 +63,7 @@ def voice_info():
 
     def sel():
 
-        selection = f"Voice number #{int(var.get())+1} selected"  #Consider #{int(var.get())+1}
+        selection = f"Voice number #{int(var.get())+1} selected!"  #Consider #{int(var.get())+1}
         label.config(text=selection, command=talk())
         voices = engine.getProperty("voices")
         engine.setProperty("voice", voices[int(var.get())].id)
@@ -103,7 +103,7 @@ def talk():
     my_entry.delete(1.0, END)
 
 
-label = Label(root, text="Enter your text here", font=("Helvetica", 18))
+label = Label(root, text="Enter your text here.", font=("Helvetica", 18))
 label.pack(pady=20)
 
 my_entry = Text(root, height=8, width=40, font=("Helvetica", 15))
